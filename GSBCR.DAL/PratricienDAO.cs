@@ -14,7 +14,16 @@ namespace GSBCR.DAL
         public static PRATICIEN FindById(Int16 pranum)
         {
             //A faire : rechercher un pratricien par son numéro
-            return null;
+            PRATICIEN p1 = null;
+            using (var context = new GSB_visite_3Entities())
+            {
+                var req = from p in context.PRATICIEN.Include("LesSpecialites")
+                          where p.PRA_NUM == pranum
+                          select p;
+                p1 = req.SingleOrDefault<PRATICIEN>();
+            }
+
+            return p1;
         }
 
         public static List<PRATICIEN> FindAll()
