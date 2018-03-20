@@ -15,6 +15,7 @@ namespace GSBCR.DAL
         public static MOTIF_VISITE FindById(string code)
         {
             //A faire : rechercher un motif visite par son nom
+
             return null;
         }
 
