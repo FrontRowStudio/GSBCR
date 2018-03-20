@@ -15,6 +15,7 @@ namespace GSBCR.DAL
         public static MOTIF_VISITE FindById(string code)
         {
             //A faire : rechercher un motif visite par son nom
+
             MOTIF_VISITE m1 = null;
             using (var context = new GSB_visite_3Entities())
             {
