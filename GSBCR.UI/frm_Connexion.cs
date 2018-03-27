@@ -15,10 +15,16 @@ namespace GSBCR.UI
 {
     public partial class frm_Connexion : Form
     {
+
+        #region définition des variables
+
         private string matricule;
         private string nom;
         private string prenom;
+        private string nomRegion;
         private REGION region;
+
+        #endregion
 
         #region Accesseurs
 
@@ -74,13 +80,34 @@ namespace GSBCR.UI
             }
         }
 
+        public string NomRegion
+        {
+            get
+            {
+                return nomRegion;
+            }
+
+            set
+            {
+                nomRegion = value;
+            }
+        }
+
         #endregion
 
+        /// <summary>
+        /// Constructeur du formulaire
+        /// </summary>
         public frm_Connexion()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Vérifie les informations et connecte l'utilisateur
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_Connexion_Click(object sender, EventArgs e)
         {
             VISITEUR unVisiteur = VisiteurDAO.FindById(txt_ID.Text);
@@ -99,7 +126,7 @@ namespace GSBCR.UI
                     prenom = unVisiteur.Vis_PRENOM;
                     matricule = unVisiteur.VIS_MATRICULE;
                     region = RegionDAO.FindById(uneAffectation.REG_CODE);
-
+                    nomRegion = region.REG_NOM;
 
                     if (uneAffectation.TRA_ROLE == "Visiteur")
                     {
@@ -123,6 +150,11 @@ namespace GSBCR.UI
             }
         }
 
+        /// <summary>
+        /// Raccourci bouton connexion -> touche entrer sur le champs mot de passe
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void txt_Pass_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -131,6 +163,9 @@ namespace GSBCR.UI
             }
         }
 
+        /// <summary>
+        /// Cache les items de la page
+        /// </summary>
         public void cacher_items()
         {
             foreach(Control unControl in this.Controls)
@@ -139,6 +174,9 @@ namespace GSBCR.UI
             }
         }
 
+        /// <summary>
+        /// Affiche les items de la page
+        /// </summary>
         public void afficher_items()
         {
             foreach (Control unControl in this.Controls)
