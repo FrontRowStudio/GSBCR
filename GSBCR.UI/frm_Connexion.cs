@@ -11,20 +11,38 @@ using GSBCR.BLL;
 using GSBCR.DAL;
 using GSBCR.modele;
 
-namespace GSBCR_UI
+namespace GSBCR.UI
 {
-    public partial class Connexion : Form
+    public partial class frm_Connexion : Form
     {
-        public Connexion()
+        private string Matricule;
+        private string Nom;
+        private string Prenom;
+        private REGION region;
+
+        public string matricule
+        {
+            get
+            {
+                return Matricule;
+            }
+
+            set
+            {
+                Matricule = value;
+            }
+        }
+
+
+        public frm_Connexion()
         {
             InitializeComponent();
-            this.Icon = Properties.Resources.icone_gsb;
         }
 
         private void btn_Connexion_Click(object sender, EventArgs e)
         {
             VISITEUR unVisiteur = VisiteurDAO.FindById(txt_ID.Text);
-            if(unVisiteur == null)
+            if (unVisiteur == null)
             {
                 lbl_Error.Text = "Nom d'utilisateur incorrect !";
                 lbl_Error.Visible = true;
@@ -34,13 +52,20 @@ namespace GSBCR_UI
                 if (txt_Pass.Text == unVisiteur.vis_mdp)
                 {
                     VAFFECTATION uneAffectation = VaffectationDAO.FindByMatricule(txt_ID.Text);
+                    Nom = unVisiteur.VIS_NOM;
+                    Prenom = unVisiteur.Vis_PRENOM;
+                    Matricule = unVisiteur.VIS_MATRICULE;
+                    Region = RegionDAO.FindById(uneAffectation.REG_CODE);
+
+
                     if (uneAffectation.TRA_ROLE == "Visiteur")
                     {
-                        MessageBox.Show("OK", "OK");
+                        this.Controls.Add(new FrmMenuVisiteur());
                     }
                     else if (uneAffectation.TRA_ROLE == "Délégué")
                     {
-                        MessageBox.Show("TNUL", "TNUL");
+                        this.Controls.Clear();
+                        this.Controls.Add(new FrmMenuDelegue());
                     }
                     else
                     {
@@ -57,7 +82,7 @@ namespace GSBCR_UI
 
         private void txt_Pass_KeyDown(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode == Keys.Enter)
+            if (e.KeyCode == Keys.Enter)
             {
                 btn_Connexion_Click(sender, e);
             }

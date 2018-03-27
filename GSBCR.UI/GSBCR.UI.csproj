@@ -55,18 +55,6 @@
     <StartupObject>GSBCR.UI.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\GSBCR2017_eleves\GSBCR.BLL\bin\Debug\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="GSBCR.BLL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\GSBCR2017_eleves\GSBCR.BLL\bin\Debug\GSBCR.BLL.dll</HintPath>
-    </Reference>
-    <Reference Include="GSBCR.modele, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\GSBCR2017_eleves\GSBCR.BLL\bin\Debug\GSBCR.modele.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -97,11 +85,11 @@
     <Compile Include="FrmNouveauRapport.Designer.cs">
       <DependentUpon>FrmNouveauRapport.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmSaisir.cs">
+    <Compile Include="frm_Connexion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmSaisir.designer.cs">
-      <DependentUpon>FrmSaisir.cs</DependentUpon>
+    <Compile Include="frm_Connexion.Designer.cs">
+      <DependentUpon>frm_Connexion.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -114,8 +102,8 @@
     <EmbeddedResource Include="FrmNouveauRapport.resx">
       <DependentUpon>FrmNouveauRapport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmSaisir.resx">
-      <DependentUpon>FrmSaisir.cs</DependentUpon>
+    <EmbeddedResource Include="frm_Connexion.resx">
+      <DependentUpon>frm_Connexion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -127,7 +115,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="app.config" />
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Properties\DataSources\GSBCR.BLL.Manager.datasource" />
     <None Include="Properties\DataSources\GSBCR.DC.RapportVisite.datasource" />
     <None Include="Properties\DataSources\GSBCR.modele.RAPPORT_VISITE.datasource" />
@@ -154,10 +144,28 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\GSBCR.BLL\GSBCR.BLL.csproj">
+      <Project>{87304d8d-be1e-436a-9223-6d9f51178f9f}</Project>
+      <Name>GSBCR.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GSBCR.DAL\GSBCR.DAL.csproj">
+      <Project>{065145a2-f3ec-4edc-b31f-758c137a92e8}</Project>
+      <Name>GSBCR.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GSBCR.modele\GSBCR.modele.csproj">
+      <Project>{2f202f79-4b2a-477c-b9d7-e701e118b6e9}</Project>
+      <Name>GSBCR.modele</Name>
+    </ProjectReference>
     <ProjectReference Include="..\GSBCR.UC\GSBCR.UC.csproj">
       <Project>{611E2D10-AD51-49A1-A7BF-BF37DA003F74}</Project>
       <Name>GSBCR.UC</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icone_gsb.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_gsb.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
