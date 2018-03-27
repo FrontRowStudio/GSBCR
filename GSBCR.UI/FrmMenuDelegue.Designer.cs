@@ -38,7 +38,8 @@
             this.lbl_menu = new System.Windows.Forms.Label();
             this.btn_listeNouveauxRapport = new System.Windows.Forms.Button();
             this.btn_listeVisiteurs = new System.Windows.Forms.Button();
-            this.Btn_Deconnexion = new System.Windows.Forms.Button();
+            this.Btn_Deconnexion = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.Btn_Deconnexion)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_consulterMedicament
@@ -166,21 +167,17 @@
             this.btn_listeVisiteurs.TabIndex = 19;
             this.btn_listeVisiteurs.Text = "Liste des visiteurs de sa région";
             this.btn_listeVisiteurs.UseVisualStyleBackColor = false;
-            this.btn_listeVisiteurs.Click += new System.EventHandler(this.btn_listeVisiteurs_Click);
             // 
             // Btn_Deconnexion
             // 
-            this.Btn_Deconnexion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(163)))), ((int)(((byte)(211)))));
-            this.Btn_Deconnexion.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Deconnexion.ForeColor = System.Drawing.Color.White;
-            this.Btn_Deconnexion.Location = new System.Drawing.Point(3, 631);
-            this.Btn_Deconnexion.Margin = new System.Windows.Forms.Padding(3, 50, 3, 3);
+            this.Btn_Deconnexion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn_Deconnexion.Image = global::GSBCR.UI.Properties.Resources.Deconnexion;
+            this.Btn_Deconnexion.Location = new System.Drawing.Point(13, 607);
             this.Btn_Deconnexion.Name = "Btn_Deconnexion";
-            this.Btn_Deconnexion.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Btn_Deconnexion.Size = new System.Drawing.Size(141, 37);
+            this.Btn_Deconnexion.Size = new System.Drawing.Size(54, 53);
+            this.Btn_Deconnexion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Btn_Deconnexion.TabIndex = 20;
-            this.Btn_Deconnexion.Text = "Deconnexion";
-            this.Btn_Deconnexion.UseVisualStyleBackColor = false;
+            this.Btn_Deconnexion.TabStop = false;
             this.Btn_Deconnexion.Click += new System.EventHandler(this.Btn_Deconnexion_Click);
             // 
             // FrmMenuDelegue
@@ -203,6 +200,7 @@
             this.Name = "FrmMenuDelegue";
             this.Size = new System.Drawing.Size(808, 671);
             this.Load += new System.EventHandler(this.FrmMenuDelegue_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.Btn_Deconnexion)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -220,6 +218,6 @@
         private System.Windows.Forms.Button btn_modifierRapport;
         private System.Windows.Forms.Button btn_listeNouveauxRapport;
         private System.Windows.Forms.Button btn_listeVisiteurs;
-        private System.Windows.Forms.Button Btn_Deconnexion;
+        private System.Windows.Forms.PictureBox Btn_Deconnexion;
     }
 }

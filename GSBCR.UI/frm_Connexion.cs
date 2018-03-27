@@ -93,6 +93,7 @@ namespace GSBCR.UI
             {
                 if (txt_Pass.Text == unVisiteur.vis_mdp)
                 {
+                    lbl_Error.Visible = false;
                     VAFFECTATION uneAffectation = VaffectationDAO.FindByMatricule(txt_ID.Text);
                     nom = unVisiteur.VIS_NOM;
                     prenom = unVisiteur.Vis_PRENOM;

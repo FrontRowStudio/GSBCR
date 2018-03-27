@@ -56,11 +56,6 @@ namespace GSBCR.UI
 
         }
 
-        private void btn_listeVisiteurs_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Btn_Deconnexion_Click(object sender, EventArgs e)
         {
             frm_parent.afficher_items();
