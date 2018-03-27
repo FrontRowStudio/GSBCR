@@ -91,6 +91,7 @@
             this.txt_matricule.Size = new System.Drawing.Size(142, 20);
             this.txt_matricule.TabIndex = 46;
             this.txt_matricule.TabStop = false;
+            this.txt_matricule.TextChanged += new System.EventHandler(this.txt_matricule_TextChanged);
             // 
             // btnVoirMed2
             // 

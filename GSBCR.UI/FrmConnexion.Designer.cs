@@ -1,6 +1,6 @@
 ﻿namespace GSBCR.UI
 {
-    partial class frm_Connexion
+    partial class FrmConnexion
     {
         /// <summary>
         /// Required designer variable.

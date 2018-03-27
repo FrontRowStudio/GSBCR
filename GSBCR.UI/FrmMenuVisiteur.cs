@@ -18,12 +18,14 @@ namespace GSBCR.UI
         }
         private void FrmMenuVisiteur_Load(object sender, EventArgs e)
         {
-
+            lbl_identiteVisiteur.Text = FrmConnexion.Nom + " " + FrmConnexion.Prenom;
+            lbl_region.Text = FrmConnexion.NomRegion;
         }
 
         private void btn_nouveauRapport_Click(object sender, EventArgs e)
         {
-
+            cacher_items();
+            this.Controls.Add(new FrmNouveauRapport());
         }
 
         private void btn_modifierRapport_Click(object sender, EventArgs e)
@@ -44,6 +46,25 @@ namespace GSBCR.UI
         private void btn_consulterMedicament_Click(object sender, EventArgs e)
         {
 
+        }
+    
+        public void cacher_items()
+        {
+            foreach (Control unControl in this.Controls)
+            {
+                unControl.Visible = false;
+            }
+        }
+
+        public void afficher_items()
+        {
+            foreach (Control unControl in this.Controls)
+            {
+                if (unControl.Name != "lbl_Error")
+                {
+                    unControl.Visible = true;
+                }
+            }
         }
     }
 }

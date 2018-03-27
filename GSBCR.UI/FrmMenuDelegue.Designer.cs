@@ -105,9 +105,10 @@
             // lbl_region
             // 
             this.lbl_region.AutoSize = true;
-            this.lbl_region.Location = new System.Drawing.Point(672, 24);
+            this.lbl_region.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_region.Location = new System.Drawing.Point(566, 26);
             this.lbl_region.Name = "lbl_region";
-            this.lbl_region.Size = new System.Drawing.Size(121, 13);
+            this.lbl_region.Size = new System.Drawing.Size(239, 22);
             this.lbl_region.TabIndex = 13;
             this.lbl_region.Text = "Région de rattachement";
             // 
@@ -128,9 +129,10 @@
             // lbl_identiteDelegue
             // 
             this.lbl_identiteDelegue.AutoSize = true;
+            this.lbl_identiteDelegue.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_identiteDelegue.Location = new System.Drawing.Point(19, 24);
             this.lbl_identiteDelegue.Name = "lbl_identiteDelegue";
-            this.lbl_identiteDelegue.Size = new System.Drawing.Size(83, 13);
+            this.lbl_identiteDelegue.Size = new System.Drawing.Size(163, 22);
             this.lbl_identiteDelegue.TabIndex = 11;
             this.lbl_identiteDelegue.Text = "Identité délégué";
             // 

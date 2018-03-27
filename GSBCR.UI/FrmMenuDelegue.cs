@@ -13,7 +13,7 @@ namespace GSBCR.UI
     public partial class FrmMenuDelegue : UserControl
     {
         int stop = 10;
-        private frm_Connexion frm_parent;
+        private FrmConnexion frm_parent;
 
         public FrmMenuDelegue()
         {
@@ -22,20 +22,21 @@ namespace GSBCR.UI
 
         private void FrmMenuDelegue_Load(object sender, EventArgs e)
         {
-            frm_parent = (frm_Connexion)this.Parent;
-            lbl_identiteDelegue.Text = frm_parent.Nom + " " + frm_parent.Prenom;
-            lbl_region.Text = frm_parent.NomRegion;
+            lbl_identiteDelegue.Text = FrmConnexion.Nom + " " + FrmConnexion.Prenom;
+            lbl_region.Text = FrmConnexion.NomRegion;
         }
 
 
         private void btn_nouveauRapport_Click(object sender, EventArgs e)
         {
-
+            cacher_items();
+            this.Controls.Add(new FrmNouveauRapport());
         }
 
         private void btn_modifierRapport_Click(object sender, EventArgs e)
         {
-
+            cacher_items();
+            this.Controls.Add(new FrmModifRapport());
         }
 
         private void btn_listeRapports_Click(object sender, EventArgs e)
@@ -66,7 +67,8 @@ namespace GSBCR.UI
 
         private void Retour_Tick(object sender, EventArgs e)
         {
-            if(stop != 0)
+            frm_parent = (FrmConnexion)this.Parent;
+            if (stop != 0)
             {
                 stop--;
             }
@@ -75,6 +77,25 @@ namespace GSBCR.UI
                 Retour.Stop();
                 frm_parent.afficher_items();
                 this.Parent.Controls.Remove(this);
+            }
+        }
+
+        public void cacher_items()
+        {
+            foreach (Control unControl in this.Controls)
+            {
+                unControl.Visible = false;
+            }
+        }
+
+        public void afficher_items()
+        {
+            foreach (Control unControl in this.Controls)
+            {
+                if (unControl.Name != "lbl_Error")
+                {
+                    unControl.Visible = true;
+                }
             }
         }
     }

@@ -58,11 +58,23 @@
     <Compile Include="FrmMenuVisiteur.Designer.cs">
       <DependentUpon>FrmMenuVisiteur.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_Connexion.cs">
+    <Compile Include="FrmModifRapport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FrmModifRapport.Designer.cs">
+      <DependentUpon>FrmModifRapport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmNouveauRapport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FrmNouveauRapport.designer.cs">
+      <DependentUpon>FrmNouveauRapport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmConnexion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_Connexion.Designer.cs">
-      <DependentUpon>frm_Connexion.cs</DependentUpon>
+    <Compile Include="FrmConnexion.Designer.cs">
+      <DependentUpon>FrmConnexion.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -72,8 +84,14 @@
     <EmbeddedResource Include="FrmMenuVisiteur.resx">
       <DependentUpon>FrmMenuVisiteur.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_Connexion.resx">
-      <DependentUpon>frm_Connexion.cs</DependentUpon>
+    <EmbeddedResource Include="FrmModifRapport.resx">
+      <DependentUpon>FrmModifRapport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmNouveauRapport.resx">
+      <DependentUpon>FrmNouveauRapport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmConnexion.resx">
+      <DependentUpon>FrmConnexion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

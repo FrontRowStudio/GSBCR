@@ -16,7 +16,7 @@ namespace GSBCR.UI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frm_Connexion());
+            Application.Run(new FrmConnexion());
         }
     }
 }

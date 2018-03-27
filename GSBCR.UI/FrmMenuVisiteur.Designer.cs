@@ -43,7 +43,7 @@
             this.btn_consulterMedicament.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(163)))), ((int)(((byte)(211)))));
             this.btn_consulterMedicament.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_consulterMedicament.ForeColor = System.Drawing.Color.White;
-            this.btn_consulterMedicament.Location = new System.Drawing.Point(246, 531);
+            this.btn_consulterMedicament.Location = new System.Drawing.Point(246, 551);
             this.btn_consulterMedicament.Margin = new System.Windows.Forms.Padding(3, 50, 3, 50);
             this.btn_consulterMedicament.Name = "btn_consulterMedicament";
             this.btn_consulterMedicament.Size = new System.Drawing.Size(313, 62);
@@ -57,7 +57,7 @@
             this.btn_consulterPraticien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(163)))), ((int)(((byte)(211)))));
             this.btn_consulterPraticien.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_consulterPraticien.ForeColor = System.Drawing.Color.White;
-            this.btn_consulterPraticien.Location = new System.Drawing.Point(246, 431);
+            this.btn_consulterPraticien.Location = new System.Drawing.Point(246, 451);
             this.btn_consulterPraticien.Margin = new System.Windows.Forms.Padding(3, 50, 3, 50);
             this.btn_consulterPraticien.Name = "btn_consulterPraticien";
             this.btn_consulterPraticien.Size = new System.Drawing.Size(313, 62);
@@ -71,7 +71,7 @@
             this.btn_listeRapports.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(163)))), ((int)(((byte)(211)))));
             this.btn_listeRapports.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_listeRapports.ForeColor = System.Drawing.Color.White;
-            this.btn_listeRapports.Location = new System.Drawing.Point(246, 331);
+            this.btn_listeRapports.Location = new System.Drawing.Point(246, 351);
             this.btn_listeRapports.Margin = new System.Windows.Forms.Padding(3, 50, 3, 50);
             this.btn_listeRapports.Name = "btn_listeRapports";
             this.btn_listeRapports.Size = new System.Drawing.Size(313, 62);
@@ -85,7 +85,7 @@
             this.btn_modifierRapport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(163)))), ((int)(((byte)(211)))));
             this.btn_modifierRapport.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_modifierRapport.ForeColor = System.Drawing.Color.White;
-            this.btn_modifierRapport.Location = new System.Drawing.Point(246, 231);
+            this.btn_modifierRapport.Location = new System.Drawing.Point(246, 251);
             this.btn_modifierRapport.Margin = new System.Windows.Forms.Padding(3, 10, 3, 10);
             this.btn_modifierRapport.Name = "btn_modifierRapport";
             this.btn_modifierRapport.Size = new System.Drawing.Size(313, 62);
@@ -97,9 +97,10 @@
             // lbl_region
             // 
             this.lbl_region.AutoSize = true;
-            this.lbl_region.Location = new System.Drawing.Point(670, 25);
+            this.lbl_region.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_region.Location = new System.Drawing.Point(569, 25);
             this.lbl_region.Name = "lbl_region";
-            this.lbl_region.Size = new System.Drawing.Size(121, 13);
+            this.lbl_region.Size = new System.Drawing.Size(239, 22);
             this.lbl_region.TabIndex = 21;
             this.lbl_region.Text = "Région de rattachement";
             // 
@@ -108,7 +109,7 @@
             this.btn_nouveauRapport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(163)))), ((int)(((byte)(211)))));
             this.btn_nouveauRapport.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_nouveauRapport.ForeColor = System.Drawing.Color.White;
-            this.btn_nouveauRapport.Location = new System.Drawing.Point(246, 131);
+            this.btn_nouveauRapport.Location = new System.Drawing.Point(246, 151);
             this.btn_nouveauRapport.Margin = new System.Windows.Forms.Padding(3, 50, 3, 50);
             this.btn_nouveauRapport.Name = "btn_nouveauRapport";
             this.btn_nouveauRapport.Size = new System.Drawing.Size(313, 62);
@@ -120,9 +121,10 @@
             // lbl_identiteVisiteur
             // 
             this.lbl_identiteVisiteur.AutoSize = true;
+            this.lbl_identiteVisiteur.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_identiteVisiteur.Location = new System.Drawing.Point(17, 25);
             this.lbl_identiteVisiteur.Name = "lbl_identiteVisiteur";
-            this.lbl_identiteVisiteur.Size = new System.Drawing.Size(78, 13);
+            this.lbl_identiteVisiteur.Size = new System.Drawing.Size(149, 22);
             this.lbl_identiteVisiteur.TabIndex = 19;
             this.lbl_identiteVisiteur.Text = "Identité visiteur";
             // 
@@ -152,7 +154,7 @@
             this.Controls.Add(this.lbl_menu);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(163)))), ((int)(((byte)(211)))));
             this.Name = "FrmMenuVisiteur";
-            this.Size = new System.Drawing.Size(808, 671);
+            this.Size = new System.Drawing.Size(808, 700);
             this.Load += new System.EventHandler(this.FrmMenuVisiteur_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

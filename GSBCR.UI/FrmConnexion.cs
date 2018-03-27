@@ -13,22 +13,22 @@ using GSBCR.modele;
 
 namespace GSBCR.UI
 {
-    public partial class frm_Connexion : Form
+    public partial class FrmConnexion : Form
     {
 
         #region définition des variables
 
-        private string matricule;
-        private string nom;
-        private string prenom;
-        private string nomRegion;
-        private REGION region;
+        private static string matricule;
+        private static string nom;
+        private static string prenom;
+        private static string nomRegion;
+        private static REGION region;
 
         #endregion
 
         #region Accesseurs
 
-        public string Matricule
+        public static string Matricule
         {
             get
             {
@@ -41,7 +41,7 @@ namespace GSBCR.UI
             }
         }
 
-        public string Nom
+        public static string Nom
         {
             get
             {
@@ -54,7 +54,7 @@ namespace GSBCR.UI
             }
         }
 
-        public string Prenom
+        public static string Prenom
         {
             get
             {
@@ -67,7 +67,7 @@ namespace GSBCR.UI
             }
         }
 
-        public REGION uneRegion
+        public static REGION uneRegion
         {
             get
             {
@@ -80,7 +80,7 @@ namespace GSBCR.UI
             }
         }
 
-        public string NomRegion
+        public static string NomRegion
         {
             get
             {
@@ -98,7 +98,7 @@ namespace GSBCR.UI
         /// <summary>
         /// Constructeur du formulaire
         /// </summary>
-        public frm_Connexion()
+        public FrmConnexion()
         {
             InitializeComponent();
         }
@@ -130,6 +130,7 @@ namespace GSBCR.UI
 
                     if (uneAffectation.TRA_ROLE == "Visiteur")
                     {
+                        cacher_items();
                         this.Controls.Add(new FrmMenuVisiteur());
                     }
                     else if (uneAffectation.TRA_ROLE == "Délégué")
@@ -177,7 +178,7 @@ namespace GSBCR.UI
         /// <summary>
         /// Affiche les items de la page
         /// </summary>
-        public void afficher_items()
+        public void  afficher_items()
         {
             foreach (Control unControl in this.Controls)
             {
