@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btn_consulterMedicament = new System.Windows.Forms.Button();
             this.btn_consulterPraticien = new System.Windows.Forms.Button();
             this.btn_listeRapports = new System.Windows.Forms.Button();
@@ -38,6 +39,11 @@
             this.lbl_menu = new System.Windows.Forms.Label();
             this.btn_listeNouveauxRapport = new System.Windows.Forms.Button();
             this.btn_listeVisiteurs = new System.Windows.Forms.Button();
+            this.GifExplo = new System.Windows.Forms.PictureBox();
+            this.Btn_Deconnexion = new System.Windows.Forms.PictureBox();
+            this.Retour = new System.Windows.Forms.Timer(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.GifExplo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Btn_Deconnexion)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_consulterMedicament
@@ -165,13 +171,40 @@
             this.btn_listeVisiteurs.TabIndex = 19;
             this.btn_listeVisiteurs.Text = "Liste des visiteurs de sa région";
             this.btn_listeVisiteurs.UseVisualStyleBackColor = false;
-            this.btn_listeVisiteurs.Click += new System.EventHandler(this.btn_listeVisiteurs_Click);
+            // 
+            // GifExplo
+            // 
+            this.GifExplo.Image = global::GSBCR.UI.Properties.Resources.explosion;
+            this.GifExplo.Location = new System.Drawing.Point(3, 513);
+            this.GifExplo.Name = "GifExplo";
+            this.GifExplo.Size = new System.Drawing.Size(75, 111);
+            this.GifExplo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.GifExplo.TabIndex = 21;
+            this.GifExplo.TabStop = false;
+            this.GifExplo.Visible = false;
+            // 
+            // Btn_Deconnexion
+            // 
+            this.Btn_Deconnexion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn_Deconnexion.Image = global::GSBCR.UI.Properties.Resources.Deconnexion;
+            this.Btn_Deconnexion.Location = new System.Drawing.Point(13, 607);
+            this.Btn_Deconnexion.Name = "Btn_Deconnexion";
+            this.Btn_Deconnexion.Size = new System.Drawing.Size(54, 53);
+            this.Btn_Deconnexion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Btn_Deconnexion.TabIndex = 20;
+            this.Btn_Deconnexion.TabStop = false;
+            this.Btn_Deconnexion.Click += new System.EventHandler(this.Btn_Deconnexion_Click);
+            // 
+            // Retour
+            // 
+            this.Retour.Tick += new System.EventHandler(this.Retour_Tick);
             // 
             // FrmMenuDelegue
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
+            this.Controls.Add(this.Btn_Deconnexion);
             this.Controls.Add(this.btn_listeVisiteurs);
             this.Controls.Add(this.btn_listeNouveauxRapport);
             this.Controls.Add(this.btn_consulterMedicament);
@@ -182,10 +215,13 @@
             this.Controls.Add(this.btn_nouveauRapport);
             this.Controls.Add(this.lbl_identiteDelegue);
             this.Controls.Add(this.lbl_menu);
+            this.Controls.Add(this.GifExplo);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(163)))), ((int)(((byte)(211)))));
             this.Name = "FrmMenuDelegue";
             this.Size = new System.Drawing.Size(808, 671);
             this.Load += new System.EventHandler(this.FrmMenuDelegue_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.GifExplo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Btn_Deconnexion)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -203,5 +239,8 @@
         private System.Windows.Forms.Button btn_modifierRapport;
         private System.Windows.Forms.Button btn_listeNouveauxRapport;
         private System.Windows.Forms.Button btn_listeVisiteurs;
+        private System.Windows.Forms.PictureBox Btn_Deconnexion;
+        private System.Windows.Forms.PictureBox GifExplo;
+        private System.Windows.Forms.Timer Retour;
     }
 }

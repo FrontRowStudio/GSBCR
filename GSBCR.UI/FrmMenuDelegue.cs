@@ -1,17 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
 using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GSBCR.BLL;
 
 namespace GSBCR.UI
 {
     public partial class FrmMenuDelegue : UserControl
     {
+        int stop = 10;
+        private frm_Connexion frm_parent;
+
         public FrmMenuDelegue()
         {
             InitializeComponent();
@@ -19,7 +22,9 @@ namespace GSBCR.UI
 
         private void FrmMenuDelegue_Load(object sender, EventArgs e)
         {
-
+            frm_parent = (frm_Connexion)this.Parent;
+            lbl_identiteDelegue.Text = frm_parent.Nom + " " + frm_parent.Prenom;
+            lbl_region.Text = frm_parent.NomRegion;
         }
 
 
@@ -53,9 +58,24 @@ namespace GSBCR.UI
 
         }
 
-        private void btn_listeVisiteurs_Click(object sender, EventArgs e)
+        private void Btn_Deconnexion_Click(object sender, EventArgs e)
         {
+            GifExplo.Visible = true;
+            Retour.Start();
+        }
 
+        private void Retour_Tick(object sender, EventArgs e)
+        {
+            if(stop != 0)
+            {
+                stop--;
+            }
+            else
+            {
+                Retour.Stop();
+                frm_parent.afficher_items();
+                this.Parent.Controls.Remove(this);
+            }
         }
     }
 }

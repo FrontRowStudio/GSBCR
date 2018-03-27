@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GSBCR.UI
+namespace GSBCR.UCTEST
 {
-    public partial class FrmNouveauRapport : UserControl
+    public partial class testpage : UserControl
     {
-        public FrmNouveauRapport()
+        public testpage()
         {
             InitializeComponent();
         }
