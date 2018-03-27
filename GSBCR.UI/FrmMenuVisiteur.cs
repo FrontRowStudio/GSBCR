@@ -13,7 +13,7 @@ namespace GSBCR.UI
     public partial class FrmMenuVisiteur : UserControl
     {
         int stop = 10;
-        private frm_Connexion frm_parent;
+        private FrmConnexion frm_parent;
         public FrmMenuVisiteur()
         {
             InitializeComponent();
@@ -58,6 +58,7 @@ namespace GSBCR.UI
 
         private void Retour_Tick(object sender, EventArgs e)
         {
+            frm_parent = (FrmConnexion)this.Parent;
             if (stop != 0)
             {
                 stop--;
