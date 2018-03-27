@@ -12,14 +12,26 @@ namespace GSBCR.UI
 {
     public partial class FrmMenuDelegue : UserControl
     {
+        #region propriété du formulaire
+
         int stop = 10;
         private FrmConnexion frm_parent;
 
+        #endregion
+
+        /// <summary>
+        /// Constructeur du formulaire
+        /// </summary>
         public FrmMenuDelegue()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Fonction lancer pendant le chargement du formulaire
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FrmMenuDelegue_Load(object sender, EventArgs e)
         {
             lbl_identiteDelegue.Text = FrmConnexion.Nom + " " + FrmConnexion.Prenom;
@@ -59,12 +71,22 @@ namespace GSBCR.UI
 
         }
 
+        /// <summary>
+        /// Retourne à la page connexion
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Btn_Deconnexion_Click(object sender, EventArgs e)
         {
             GifExplo.Visible = true;
             Retour.Start();
         }
 
+        /// <summary>
+        /// On attend une seconde avant de revenir au début
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Retour_Tick(object sender, EventArgs e)
         {
             frm_parent = (FrmConnexion)this.Parent;

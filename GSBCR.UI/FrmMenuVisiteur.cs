@@ -12,6 +12,8 @@ namespace GSBCR.UI
 {
     public partial class FrmMenuVisiteur : UserControl
     {
+        int stop = 10;
+        private frm_Connexion frm_parent;
         public FrmMenuVisiteur()
         {
             InitializeComponent();
@@ -46,6 +48,26 @@ namespace GSBCR.UI
         private void btn_consulterMedicament_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Btn_Deconnexion_Click(object sender, EventArgs e)
+        {
+            GifExplo.Visible = true;
+            Retour.Start();
+        }
+
+        private void Retour_Tick(object sender, EventArgs e)
+        {
+            if (stop != 0)
+            {
+                stop--;
+            }
+            else
+            {
+                Retour.Stop();
+                frm_parent.afficher_items();
+                this.Parent.Controls.Remove(this);
+            }
         }
     
         public void cacher_items()
