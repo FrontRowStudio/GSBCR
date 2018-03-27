@@ -28,27 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lbl_Error = new System.Windows.Forms.Label();
             this.txt_Pass = new System.Windows.Forms.MaskedTextBox();
             this.img_accueil = new System.Windows.Forms.PictureBox();
             this.btn_Connexion = new System.Windows.Forms.Button();
             this.lbl_Pass = new System.Windows.Forms.Label();
             this.lbl_ID = new System.Windows.Forms.Label();
             this.txt_ID = new System.Windows.Forms.TextBox();
+            this.lbl_Error = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.img_accueil)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lbl_Error
-            // 
-            this.lbl_Error.AutoSize = true;
-            this.lbl_Error.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Error.ForeColor = System.Drawing.Color.Red;
-            this.lbl_Error.Location = new System.Drawing.Point(318, 429);
-            this.lbl_Error.Name = "lbl_Error";
-            this.lbl_Error.Size = new System.Drawing.Size(39, 16);
-            this.lbl_Error.TabIndex = 15;
-            this.lbl_Error.Text = "error";
-            this.lbl_Error.Visible = false;
             // 
             // txt_Pass
             // 
@@ -114,6 +102,18 @@
             this.txt_ID.Size = new System.Drawing.Size(100, 20);
             this.txt_ID.TabIndex = 9;
             // 
+            // lbl_Error
+            // 
+            this.lbl_Error.AutoSize = true;
+            this.lbl_Error.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Error.ForeColor = System.Drawing.Color.Red;
+            this.lbl_Error.Location = new System.Drawing.Point(318, 429);
+            this.lbl_Error.Name = "lbl_Error";
+            this.lbl_Error.Size = new System.Drawing.Size(39, 16);
+            this.lbl_Error.TabIndex = 15;
+            this.lbl_Error.Text = "error";
+            this.lbl_Error.Visible = false;
+            // 
             // frm_Connexion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -136,13 +136,12 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lbl_Error;
         private System.Windows.Forms.MaskedTextBox txt_Pass;
         private System.Windows.Forms.PictureBox img_accueil;
         private System.Windows.Forms.Button btn_Connexion;
         private System.Windows.Forms.Label lbl_Pass;
         private System.Windows.Forms.Label lbl_ID;
         private System.Windows.Forms.TextBox txt_ID;
+        private System.Windows.Forms.Label lbl_Error;
     }
 }

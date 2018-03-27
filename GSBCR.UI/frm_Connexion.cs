@@ -127,14 +127,13 @@ namespace GSBCR.UI
                     matricule = unVisiteur.VIS_MATRICULE;
                     region = RegionDAO.FindById(uneAffectation.REG_CODE);
                     nomRegion = region.REG_NOM;
-
+                    cacher_items();
                     if (uneAffectation.TRA_ROLE == "Visiteur")
                     {
                         this.Controls.Add(new FrmMenuVisiteur());
                     }
                     else if (uneAffectation.TRA_ROLE == "Délégué")
                     {
-                        cacher_items();
                         this.Controls.Add(new FrmMenuDelegue());
                     }
                     else

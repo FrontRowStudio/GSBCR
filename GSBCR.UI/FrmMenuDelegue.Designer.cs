@@ -39,11 +39,11 @@
             this.lbl_menu = new System.Windows.Forms.Label();
             this.btn_listeNouveauxRapport = new System.Windows.Forms.Button();
             this.btn_listeVisiteurs = new System.Windows.Forms.Button();
-            this.GifExplo = new System.Windows.Forms.PictureBox();
-            this.Btn_Deconnexion = new System.Windows.Forms.PictureBox();
             this.Retour = new System.Windows.Forms.Timer(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.GifExplo)).BeginInit();
+            this.Btn_Deconnexion = new System.Windows.Forms.PictureBox();
+            this.GifExplo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Deconnexion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GifExplo)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_consulterMedicament
@@ -172,16 +172,9 @@
             this.btn_listeVisiteurs.Text = "Liste des visiteurs de sa région";
             this.btn_listeVisiteurs.UseVisualStyleBackColor = false;
             // 
-            // GifExplo
+            // Retour
             // 
-            this.GifExplo.Image = global::GSBCR.UI.Properties.Resources.explosion;
-            this.GifExplo.Location = new System.Drawing.Point(3, 513);
-            this.GifExplo.Name = "GifExplo";
-            this.GifExplo.Size = new System.Drawing.Size(75, 111);
-            this.GifExplo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.GifExplo.TabIndex = 21;
-            this.GifExplo.TabStop = false;
-            this.GifExplo.Visible = false;
+            this.Retour.Tick += new System.EventHandler(this.Retour_Tick);
             // 
             // Btn_Deconnexion
             // 
@@ -195,9 +188,16 @@
             this.Btn_Deconnexion.TabStop = false;
             this.Btn_Deconnexion.Click += new System.EventHandler(this.Btn_Deconnexion_Click);
             // 
-            // Retour
+            // GifExplo
             // 
-            this.Retour.Tick += new System.EventHandler(this.Retour_Tick);
+            this.GifExplo.Image = global::GSBCR.UI.Properties.Resources.explosion;
+            this.GifExplo.Location = new System.Drawing.Point(3, 513);
+            this.GifExplo.Name = "GifExplo";
+            this.GifExplo.Size = new System.Drawing.Size(75, 111);
+            this.GifExplo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.GifExplo.TabIndex = 21;
+            this.GifExplo.TabStop = false;
+            this.GifExplo.Visible = false;
             // 
             // FrmMenuDelegue
             // 
@@ -220,8 +220,8 @@
             this.Name = "FrmMenuDelegue";
             this.Size = new System.Drawing.Size(808, 671);
             this.Load += new System.EventHandler(this.FrmMenuDelegue_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.GifExplo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Deconnexion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GifExplo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
