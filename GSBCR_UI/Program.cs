@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GSBCR_UI
+namespace GSBCR.UI
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace GSBCR_UI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Connexion());
+            Application.Run(new frm_Connexion());
         }
     }
 }

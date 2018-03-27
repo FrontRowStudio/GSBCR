@@ -142,10 +142,7 @@ namespace GSBCR.UI
         {
             foreach (Control unControl in this.Controls)
             {
-                if(unControl.Name != "lbl_Error")
-                {
-                    unControl.Visible = true;
-                }
+                unControl.Visible = true;
             }
         }
     }
