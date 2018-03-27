@@ -47,5 +47,12 @@ namespace GSBCR.UCTEST
             ucMedicament1.Visible = false;
             cbxMedoc.SelectedIndex = -1;
         }
+
+        private void btnQuitter_Click(object sender, EventArgs e)
+        {
+            testpage unepage = new testpage();
+            this.Controls.Add(unepage);
+            
+        }
     }
 }
