@@ -158,7 +158,7 @@
             this.grb_medicaments.Controls.Add(this.cbxMed1);
             this.grb_medicaments.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grb_medicaments.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(163)))), ((int)(((byte)(211)))));
-            this.grb_medicaments.Location = new System.Drawing.Point(143, 429);
+            this.grb_medicaments.Location = new System.Drawing.Point(143, 450);
             this.grb_medicaments.Name = "grb_medicaments";
             this.grb_medicaments.Size = new System.Drawing.Size(523, 138);
             this.grb_medicaments.TabIndex = 45;
@@ -181,7 +181,7 @@
             this.btnQuitter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(163)))), ((int)(((byte)(211)))));
             this.btnQuitter.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuitter.ForeColor = System.Drawing.Color.White;
-            this.btnQuitter.Location = new System.Drawing.Point(662, 593);
+            this.btnQuitter.Location = new System.Drawing.Point(662, 614);
             this.btnQuitter.Name = "btnQuitter";
             this.btnQuitter.Size = new System.Drawing.Size(120, 50);
             this.btnQuitter.TabIndex = 43;
@@ -201,7 +201,7 @@
             this.btnValider.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(163)))), ((int)(((byte)(211)))));
             this.btnValider.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnValider.ForeColor = System.Drawing.Color.White;
-            this.btnValider.Location = new System.Drawing.Point(514, 593);
+            this.btnValider.Location = new System.Drawing.Point(514, 614);
             this.btnValider.Name = "btnValider";
             this.btnValider.Size = new System.Drawing.Size(130, 50);
             this.btnValider.TabIndex = 41;
@@ -213,7 +213,7 @@
             this.chbDefinitif.AutoSize = true;
             this.chbDefinitif.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chbDefinitif.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(163)))), ((int)(((byte)(211)))));
-            this.chbDefinitif.Location = new System.Drawing.Point(134, 593);
+            this.chbDefinitif.Location = new System.Drawing.Point(134, 614);
             this.chbDefinitif.Name = "chbDefinitif";
             this.chbDefinitif.Size = new System.Drawing.Size(140, 22);
             this.chbDefinitif.TabIndex = 40;
@@ -407,7 +407,7 @@
             this.Controls.Add(this.lbl_numRapport);
             this.ForeColor = System.Drawing.Color.Coral;
             this.Name = "FrmNouveauRapport";
-            this.Size = new System.Drawing.Size(808, 671);
+            this.Size = new System.Drawing.Size(808, 700);
             this.grb_medicaments.ResumeLayout(false);
             this.grb_medicaments.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nup_coef)).EndInit();
