@@ -49,7 +49,7 @@
     <Compile Include="FrmAfficherDetailsRapport.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="FrmAfficherDetailsRapport.Designer.cs">
+    <Compile Include="FrmAfficherDetailsRapport.designer.cs">
       <DependentUpon>FrmAfficherDetailsRapport.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmConsulterHistoriqueRapportRegion.cs">
