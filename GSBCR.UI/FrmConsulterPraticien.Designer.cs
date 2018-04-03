@@ -84,7 +84,7 @@
             // dgv_consulterPraticien
             // 
             this.dgv_consulterPraticien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_consulterPraticien.Location = new System.Drawing.Point(34, 195);
+            this.dgv_consulterPraticien.Location = new System.Drawing.Point(36, 193);
             this.dgv_consulterPraticien.Name = "dgv_consulterPraticien";
             this.dgv_consulterPraticien.Size = new System.Drawing.Size(729, 295);
             this.dgv_consulterPraticien.TabIndex = 50;
