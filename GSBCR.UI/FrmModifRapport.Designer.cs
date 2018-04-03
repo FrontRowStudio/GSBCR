@@ -31,14 +31,14 @@
             this.components = new System.ComponentModel.Container();
             this.lbl_nouveauRapport = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.rAPPORTVISITEBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.RAP_MOTIF = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rAPNUMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rAPPRANUMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rAPDATVISITDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RAP_MOTIF = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rAPETATDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rAPMED1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rAPMED2DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rAPPORTVISITEBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rAPPORTVISITEBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -75,9 +75,11 @@
             this.dataGridView1.Size = new System.Drawing.Size(743, 164);
             this.dataGridView1.TabIndex = 29;
             // 
-            // rAPPORTVISITEBindingSource
+            // RAP_MOTIF
             // 
-            this.rAPPORTVISITEBindingSource.DataSource = typeof(GSBCR.modele.RAPPORT_VISITE);
+            this.RAP_MOTIF.DataPropertyName = "RAP_MOTIF";
+            this.RAP_MOTIF.HeaderText = "Motif visite";
+            this.RAP_MOTIF.Name = "RAP_MOTIF";
             // 
             // rAPNUMDataGridViewTextBoxColumn
             // 
@@ -97,12 +99,6 @@
             this.rAPDATVISITDataGridViewTextBoxColumn.HeaderText = "Date visite";
             this.rAPDATVISITDataGridViewTextBoxColumn.Name = "rAPDATVISITDataGridViewTextBoxColumn";
             // 
-            // RAP_MOTIF
-            // 
-            this.RAP_MOTIF.DataPropertyName = "RAP_MOTIF";
-            this.RAP_MOTIF.HeaderText = "Motif visite";
-            this.RAP_MOTIF.Name = "RAP_MOTIF";
-            // 
             // rAPETATDataGridViewTextBoxColumn
             // 
             this.rAPETATDataGridViewTextBoxColumn.DataPropertyName = "RAP_ETAT";
@@ -120,6 +116,10 @@
             this.rAPMED2DataGridViewTextBoxColumn.DataPropertyName = "RAP_MED2";
             this.rAPMED2DataGridViewTextBoxColumn.HeaderText = "Code MED2";
             this.rAPMED2DataGridViewTextBoxColumn.Name = "rAPMED2DataGridViewTextBoxColumn";
+            // 
+            // rAPPORTVISITEBindingSource
+            // 
+            this.rAPPORTVISITEBindingSource.DataSource = typeof(GSBCR.modele.RAPPORT_VISITE);
             // 
             // FrmModifRapport
             // 

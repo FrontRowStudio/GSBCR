@@ -42,12 +42,14 @@ namespace GSBCR.UI
 
         private void btn_consulterPraticien_Click(object sender, EventArgs e)
         {
-
+            cacher_items();
+            this.Controls.Add(new FrmConsulterPraticien());
         }
 
         private void btn_consulterMedicament_Click(object sender, EventArgs e)
         {
-
+            cacher_items();
+            this.Controls.Add(new FrmConsulterMedicament());
         }
 
         private void Btn_Deconnexion_Click(object sender, EventArgs e)

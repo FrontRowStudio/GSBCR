@@ -10,14 +10,19 @@ using System.Windows.Forms;
 
 namespace GSBCR.UI
 {
-    public partial class FrmModifRapport : UserControl
+    public partial class FrmConsulterRapportsValides : UserControl
     {
-        public FrmModifRapport()
+        public FrmConsulterRapportsValides()
         {
             InitializeComponent();
         }
 
-        private void frmConsulterPraticien1_Load(object sender, EventArgs e)
+        private void lblTitre_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtg_consulterRapportsValides_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
